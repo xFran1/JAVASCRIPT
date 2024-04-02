@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+  
+    <h4>Registro de Estudiantes y Sus Cursos</h4>
+    <div id="registro" style="display: block;">
+        <p>Nombre:<input id="nombre"></p>
+        <button onclick="introducirNombre()">Introducir nombre</button>
+    
+    </div>
+    <div id="modulos" style="display: none;">
+        <div id="modulosDe"></div>
+        Modulo:<input id="modulo"><button onclick="introducirModulos()">Introducir</button>
+    </div>
+    <br><br>
+    <div class="siguienteAlumno">
+        <button onclick="siguienteAlumno()">Siguiente Alumno</button>
+    </div>
+    <div class="mostrarAlumnos">
+        <button onclick="mostrarAlumnos()">Mostrar Alumnos</button>
+        <div id="resultado"></div>
+    </div>
+
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>

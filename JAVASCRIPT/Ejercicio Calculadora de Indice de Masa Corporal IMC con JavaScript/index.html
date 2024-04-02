@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo IMC</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.8em;
+        }
+        /* Estilos básicos para el formulario */
+        
+        form {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        /* Margen inferior para cada div que agrupa un campo del formulario */
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="registroForm">
+        <!--Campo para el peso-->
+        <table border="1">
+            <tr>
+                <td>
+                    <div>
+                        <label for="peso">Peso:</label>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <input type="number" id="peso" name="peso">
+                        kg
+                        <div id="errorPeso" class="error"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <label for="altura">Altura:</label>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <input type="number" id="altura" name="altura">
+                        m
+                        <div id="errorAltura" class="error"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <button type="button" onclick="limpiarContenido()">Limpiar</button>
+                </td>
+                <td colspan="1" align="center">
+                    <button type="button" onclick="calcularIMC()">Calcular</button>
+                </td>
+            </tr>
+        </table>
+        <div id="resultado"></div>
+        <div id="categoria"></div>
+
+
+
+
+    </form>
+
+
+
+    <script>
+function limpiarContenido() {
+    // Selecciona el elemento que contiene el contenido
+    let peso = document.getElementById("peso");
+    // Limpia el contenido estableciendo su contenido interno como una cadena vacía
+    peso.value = "";
+
+    let altura = document.getElementById("altura");
+    // Limpia el contenido estableciendo su contenido interno como una cadena vacía
+    altura.value = "";
+
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = "";
+
+    let categoria = document.getElementById("categoria");
+    categoria.innerHTML = "";
+
+}
+function calcularIMC(){
+let isValid = true; // Bandera para seguir el estado de la validación
+// Referencias a los divs de error para poder mostrar mensajes
+let errorPeso = document.getElementById("errorPeso");
+let errorAltura = document.getElementById("errorAltura");
+
+// Limpiar mensajes de error anteriores
+errorPeso.textContent = '';
+errorAltura.textContent = '';
+
+
+// Validación del peso: no debe estar vacío
+let peso = document.getElementById("peso").value;
+if (peso.trim() === '') {
+    errorPeso.textContent = 'Por favor, introduce el peso.';
+    isValid = false;
+}
+
+let altura = document.getElementById("altura").value;
+if (altura.trim() === '') {
+    errorAltura.textContent = 'Por favor, introduce la altura.';
+    isValid = false;
+}
+
+
+// Si alguna validación falla, previene el envío del formulario
+if (!isValid) {
+    event.preventDefault();
+}
+
+if(isValid){
+    let imc = peso / (altura * altura);
+document.getElementById("resultado").textContent = "Tu índice de masa corporal (IMC) es: " + imc;
+
+if(imc<18.5){
+    document.getElementById("categoria").textContent = "Categoria de IMC: Bajo peso" ;
+
+}else if(imc>=18.5&&imc<24.9){
+    document.getElementById("categoria").textContent = "Categoria de IMC: Peso normal" ;
+
+}else if(imc>=25&&imc<29.9){
+    document.getElementById("categoria").textContent = "Categoria de IMC: Sobrepeso" ;
+
+}else if(imc>=30){
+    document.getElementById("categoria").textContent = "Categoria de IMC: Obeso" ;
+
+}
+}
+
+
+
+};
+
+    </script>
+</body>
+</html>
