@@ -1,0 +1,42 @@
+body{
+    background-color: #ceffeb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flexbox{
+    margin-top: 50px;
+    background-color: #90fff7;
+    margin-left: 300px;
+    margin-right: 300px;
+    min-height: 200px;
+    height: 200px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border:1px solid black;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+.titulo{
+font-size: 20px;
+}
+.registro{
+    margin-top: 40px;
+}
+.modulosde{
+    margin-top: 20px;
+}
+.modulo{
+
+}
+
+.resultado{
+    margin-top: 15px;
+    background-color: #90fff7;
+    border: 1px solid black;
+    border-top: 1px solid grey;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+}

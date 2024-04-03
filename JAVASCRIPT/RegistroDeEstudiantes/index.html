@@ -4,31 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-    <h4>Registro de Estudiantes y Sus Cursos</h4>
-    <div id="registro" style="display: block;">
-        <p>Nombre:<input id="nombre"></p>
-        <button onclick="introducirNombre()">Introducir nombre</button>
-    
+  <div class="flexbox">
+    <div class="titulo"> 
+           Registro de Estudiantes y Sus Cursos
     </div>
+    <div class="registro">
+        <div id="registro" style="display: block;">
+            <p>Nombre:<input id="nombre"></p>
+            <button onclick="introducirNombre()">Introducir nombre</button>
+        
+        </div>
+    </div>
+   <div class="modulosde">
     <div id="modulos" style="display: none;">
         <div id="modulosDe"></div>
-        Modulo:<input id="modulo"><button onclick="introducirModulos()">Introducir</button>
+        <div class="modulo">        Modulo:<input id="modulo"><button onclick="introducirModulos()">Introducir</button>
+        </div>
     </div>
+</div>
     <br><br>
     <div class="siguienteAlumno">
-        <button onclick="siguienteAlumno()">Siguiente Alumno</button>
+        <button onclick="siguienteAlumno()">Introducir datos</button>
     </div>
     <div class="mostrarAlumnos">
         <button onclick="mostrarAlumnos()">Mostrar Alumnos</button>
-        <div id="resultado"></div>
+        <div class="resultado" id="mostrarAlumnos" style="display: none;">wadad</div>
     </div>
-
+</div>
     
 
 
