@@ -47,6 +47,8 @@ modulos1.style.display="none";
 }
 
 function mostrarAlumnos(){
+    let mostrarAlumnos = document.getElementById("mostrarAlumnos");
+    mostrarAlumnos.style.display="block";
     let texto1="";
 
     for(var i = 0;i<alumnos.length;i++){
@@ -61,6 +63,5 @@ function mostrarAlumnos(){
         texto1=texto1+"\n---------------\n"
     }
     
-    let resultado = document.getElementById("resultado");
-    resultado.innerText=texto1;
+    mostrarAlumnos.innerText=texto1;
 }

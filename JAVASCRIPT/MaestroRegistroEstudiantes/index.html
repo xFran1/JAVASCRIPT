@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Los metadatos del encabezado definen el conjunto de caracteres y la visualización responsive. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparecerá en la pestaña del navegador. -->
+    <title>Registro de Estudiantes</title>
+</head>
+<body>
+    <!-- Título principal de la página. -->
+    <h2>Registro de Estudiantes y Cursos</h2>
+    
+    <!-- Sección para agregar un nuevo estudiante. -->
+    <div>
+        <!-- Campo de texto para ingresar el nombre del estudiante. -->
+        <input type="text" id="nombreEstudiante" placeholder="Nombre del Estudiante">
+        <!-- Botón para ejecutar la acción de agregar el estudiante. Al hacer clic, se invoca una función de JS. -->
+        <button id="agregarEstudiante">Agregar Estudiante</button>
+    </div>
+    
+    <!-- Sección para inscribir un estudiante en un curso específico. -->
+    <div>
+        <!-- Selector/dropdown para elegir un estudiante previamente agregado. Se llenará dinámicamente con JS. -->
+        <select id="selectorEstudiantes">
+            <!-- Opción inicial que indica la acción a realizar. -->
+            <option value="">Seleccione un estudiante</option>
+        </select>
+        <!-- Campo de texto para ingresar el nombre del curso al que se inscribirá el estudiante seleccionado. -->
+        <input type="text" id="nombreCurso" placeholder="Nombre del Curso">
+        <!-- Botón para ejecutar la acción de inscripción del estudiante en el curso. -->
+        <button id="inscribirCurso">Inscribir Curso</button>
+    </div>
+    
+    <!-- Sección para listar todos los estudiantes y sus cursos inscritos. -->
+    <div>
+        <!-- Botón para mostrar la lista de estudiantes y sus cursos. Al hacer clic, se muestra la información abajo. -->
+        <button id="listarEstudiantes">Listar Estudiantes</button>
+    </div>
+    
+    <!-- Área donde se mostrarán los estudiantes y sus cursos inscritos una vez que se presione el botón de listar. -->
+    <div id="listaEstudiantes"></div>
+
+    <!-- Referencia al archivo JavaScript que contiene la lógica de la aplicación. -->
+    <!-- Este script interactúa con los elementos HTML para realizar las acciones de registro e inscripción. -->
+    <script src="registro.js"></script>
+</body>
+</html>
