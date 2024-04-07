@@ -4,29 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    
 </head>
 <body>
-        <div class="titulo"><h2>Gestión de biblioteca</h2></div>
-        <div class="agregarLibro">Agregar libro | Titulo: <input> | Autor: <input><button id="agregarLibro()">Ingresar libro</button>
+        <div class="flexbox">
+        <div class="titulo"><h2>Gestión de biblioteca<div class="titulo1"></div></h2></div>
+        <div class="flexbox1">
+            <div class="button-wrapper">
+                <button class="boton" id="Inicio">Inicio</button>
+                </div>
+                <div class="espacio1"></div>
+        <div>    
+        <div class="agregarLibro">Agregar libro <div class="agregarLibro1"></div></div>
+        <div class="espacio1"></div>
+        <div class="flexbox2">
+        <div class="input-wrapper">
+            <div class="wrapper">
+                <div class="icon"><i class='bx bxs-book' style='color:#080808'  ></i>
+                </div>
+            <input type="text" id="titulo" placeholder="Titulo"></div>
         </div>
-        <br>
-        <div class="agregarUsuario">Agregar usuario: <input><button>Ingresar</button>
+
+        <div class="input-wrapper">
+            <div class="wrapper">
+                <div class="icon"><i class='bx bx-edit-alt' style='color:#080808' ></i>
+                </div>
+            <input type="text" id="autor" placeholder="Autor"></div>
+            
         </div>
+        <div class="button-wrapper">
+        <button class="boton" id="agregarLibro">Ingresar libro</button>
+        </div>
+    </div>
         <br>
+
+
+        
+        
+        
+    </div>
+        <br>
+        <div class="agregarLibro">Agregar usuario: <div class="agregarLibro1"></div></div>
+        <div class="espacio1"></div>
+        
+        <div class="flexbox2">
+        <div class="input-wrapper">
+            <div class="wrapper">
+                <div class="icon"><i class='bx bx-user' style='color:#080808' ></i></i>
+                </div>
+                <input type="text" id="usuario" placeholder="Usuario"></div>
+            
+        </div>
+   
+            
+            <div class="button-wrapper">
+                <button class="boton" id="agregarUsuario">Ingresar</button>
+                </div>
+            </div>
+        <br>
+
         <div>
-            <!-- Selector/dropdown para elegir un estudiante previamente agregado. Se llenará dinámicamente con JS. -->
-            <select id="selectorLibros">
-                <!-- Opción inicial que indica la acción a realizar. -->
-                <option value="">Seleccione un libro</option>
-            </select>
-            <!-- Campo de texto para ingresar el nombre del curso al que se inscribirá el estudiante seleccionado. -->
-            <input type="text" id="nombreLibro" placeholder="Nombre del Libro">
-            <!-- Botón para ejecutar la acción de inscripción del estudiante en el curso. -->
-            <button id="inscribirLibro">Inscribir Curso</button>
+          
+            
+        </div>
+        <br>
+        <div class="agregarLibro">Sistema para alquilar libros: <div class="agregarLibro1"></div></div>
+        <div class="espacio1"></div>
+       
+        <div id="botonesLibros" style="display:block;">
+        <button class="boton" id="Devolver">Devolver libro</button>
+        <button class="boton" id="Pedir">Pedir libro</button>
+        </div>
+        <!--Prestar-->
+
+        <div id="PrestarLibro" style="display:none;">
+            <div class="flexbox2">
+            <div class="input-wrapper">
+                <div class="wrapper">
+                    <div class="icon"><i class='bx bx-user' style='color:#080808' ></i></i>
+                    </div>
+                    <input type="text" id="usuarioPrestarLibro" placeholder="Usuario"></div>
+                
+            </div>
+
+            <div class="select-wrapper2">
+                
+                <select id="selectorLibrosDisponibles">
+                    <!-- Opción inicial que indica la acción a realizar. -->
+                    <option value="">Seleccione un libro</option>
+                </select>
+            </div>
+       
+            <div class="button-wrapper" id="boton" >
+                <button class="boton" id="pedirPrestadoLibro">Pedir libro</button>
+            </div>
+        </div>
         </div>
 
+        <!--Devolver-->
 
+        <div id="DevolverLibro" style="display:none;">
 
+            <div class="flexbox2">
+            <div class="input-wrapper">
+                <div class="wrapper">
+                    <div class="icon"><i class='bx bx-user' style='color:#080808' ></i></i>
+                    </div>
+                    <input type="text" id="usuarioDevolverLibro" placeholder="Usuario"></div>
+                
+            </div>
+            
+            <div class="button-wrapper" id="boton1" style="display:none;">
+                <button class="boton" id="botonDevolverLibro">Introducir usuario</button>
+            </div>
+        </div>
+                <div class="espacio1"></div>
+            <div id="mostrarDevolucion" style="display:none;">
+                <div class="flexbox2">
+                <div class="select-wrapper">
+                    <select id="selectorLibrosDevolver">
+                        <option value="0">Seleccione un libro</option>
+                    </select>
+                </div>
+
+                <div class="button-wrapper" id="boton1" >
+                    <button class="boton2" id="pedirDevolverLibro">Devolver libro</button>
+                </div>
+            </div>
+            </div>
+            </div>
+
+         
+            <br>
+            
+            <br>
+            <br>
+
+            <div class="encuentraLibros">
+            <div class="select-wrapper">
+                <select id="selectorLibros">
+                    <option value="">Encuentra todos los libros</option>
+                </select>
+            </div>
+        </div>
+
+           
+        </div>
+        </div>
 
 
     <script src="script.js"></script>

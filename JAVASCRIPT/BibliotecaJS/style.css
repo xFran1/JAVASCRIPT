@@ -1,0 +1,168 @@
+body{
+    background-image: url(img/biblio2.jpg);
+    margin: 0;
+padding: 0;
+font-size: 20px;
+}
+
+.flexbox{
+    background:transparent;
+    backdrop-filter: blur(2px);
+
+    padding: 10px;
+    margin-top: 8%;
+    margin-left: 30%;
+    margin-right: 30%;
+    height: 500px;
+    max-height: 500px;
+    min-height: 550px;
+    color: rgba(255, 255, 255, 0.921);
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.titulo{
+    text-align: center;
+}
+.titulo1{
+    
+    background-color: rgb(62, 214, 62);
+    
+    margin: 0 auto;
+
+    height: 3px;
+    width: 22%;
+    border-radius: 50px;
+    
+}
+.agregarLibro1{
+    background-color: rgb(78, 244, 78);
+    
+
+    height: 3px;
+    width: 5%;
+    border-radius: 50px;
+    margin-left: 24px;
+}
+
+.input-wrapper {
+    
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.wrapper{
+    margin-left: 5px;
+    display: flex;
+}
+.icon{
+    margin-top: 5px;
+}
+
+
+.input-wrapper input[type="text"] {
+    padding: 5px 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.input-wrapper input[type="text"]:focus {
+    outline: none;
+   
+}
+
+.input-wrapper input::placeholder{
+    color: rgb(176, 176, 176);
+}
+
+.espacio1{
+    background-color: transparent;
+    height: 6px;
+}
+
+.boton{
+    text-align: center;
+    padding: 6px 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton2{
+    text-align: center;
+    padding: 3px 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover{
+    background-color: #ddf3ca;
+}
+
+.button-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+.flexbox2{
+    display: flex;
+    gap:5px;
+}
+
+.flexbox1{
+    margin-left: 8px;
+}
+
+.select-wrapper select{
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none; /* Elimina el estilo nativo del navegador */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    cursor: pointer;
+    width: 250px;
+    max-width: 250px;
+}
+
+.select-wrapper select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+.select-wrapper2 select{
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none; 
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    cursor: pointer;
+    width: 150px;
+    max-width: 250px;
+}
+
+.select-wrapper2 select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.encuentraLibros{
+    position: fixed;
+}
